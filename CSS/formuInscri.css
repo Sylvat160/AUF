@@ -1,0 +1,76 @@
+@font-face {
+    font-family: "Merriweather-Regular" !important;
+    src: url(../Merriweather/Merriweather-Regular.ttf) format("truetype") !important;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none !important;
+    text-decoration: none !important;
+    font-family: "Merriweather-Regular" !important;
+}
+
+.sup {
+    align-content: center;
+}
+
+.ajout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FC2121;
+    width: 25%;
+    height: 70px;
+    margin: auto;
+    padding: auto;
+    border-radius: 20px;
+    color: #fff;
+}
+
+@media screen and (max-width : 679px) {
+    .ajout {
+        width: 50%;
+    }
+}
+
+    
+.container .formu p {
+    background-color: #FC2121 !important;
+    width: 90px;
+    height: 80px;
+    position: relative;
+    bottom: 25px;
+    left: 4px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 2px solid black;
+    
+}
+
+::placeholder {
+    color :#fff;
+    position: relative;
+    left: 20px;
+}
+input {
+    color: #fff;
+}
+
+.element {
+    font-size: 1.5em;
+    height: 80px;
+    width: 35%;
+}
+
+.container .formu  img {
+    position: relative;
+    top: 16px;
+    left: 20px;
+}
+
+input[type=submit] {
+    color: #fff;
+    font-size: 25px;
+}

@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "Merriweather-Regular" !important;
+    src: url(../Merriweather/Merriweather-Regular.ttf) format("truetype") !important;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none !important;
+    text-decoration: none !important;
+    font-family: "Merriweather-Regular" !important;
+}
+
+.sup {
+    align-content: center;
+}
+
+.voir {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FC2121;
+    width: 25%;
+    height: 70px;
+    margin: auto;
+    padding: auto;
+    border-radius: 20px;
+    color: #fff;
+}
