@@ -13,7 +13,7 @@
 <body>
 
     <?php
-    include("entete.php");
+    // include("entete.php");
     ?>
 
     <div class="container sup">

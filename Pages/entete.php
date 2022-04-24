@@ -14,12 +14,12 @@
 
     <nav class="navbar navbar-light ">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="acceuil.php">
                 <img src="../images/logoauf.png" alt="" width="100" height="84">
 
             </a>
-            <a href="#" class="navbar-brand lien1 gx-2">Ajouter des abonnes</a>
-            <a href="#" class="navbar-brand lien1">Voir la liste des abonnees</a>
+            <a href="#" class="navbar-brand lien1 gx-2"></a>
+            <a href="#" class="navbar-brand lien1"></a>
             <button class="navbar-toggler hamb" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
 
@@ -43,12 +43,23 @@
         if ($password == 'AgenceUF') {
             header('location:formuInscription.php');
             // echo '<script>window.location.href="formulnscription.php"</script>';
-            
+
         } else {
             echo "Mot de passe incorrect";
         }
     }
     ?>
+
+    <?php
+        include("formuInscription.php");
+        include("listeA.php");
+    ?>
+
+    <center>
+        <a href="#">
+            <img src="../images/+.png" alt="">
+        </a>
+    </center>
 
 
 

@@ -12,7 +12,7 @@
 <body>
 
     <div class="container sup py-5">
-        <p class="voir"> Voir la liste des Abonnés</p>
+        <p class="voir"> La liste des Abonnés</p>
     </div>
 
     <div class="affiche">
@@ -30,12 +30,12 @@
         while ($donnees = $recu->fetch()) {
 
         ?>
-           <center> <p style="background-color: #CC767F; color:#fff; width:40%; height:50px; display:flex; align-items:center;">
+           <center> <p style="background-color: #CC767F; color:#fff; width:50%; height:50px; display:flex; align-items:center; margin-bottom:10px;">
                 
-                <span style="position: relative; left:20px;"> <?php echo $donnees['nom'] ?></span>
-                <span style="position: relative; left:100px;"> <?php echo $donnees['prenoms'] ?></span> 
-                <span style="position: relative; left:200px;"> <?php echo $donnees['numero'] ?></span>
-                <span style="position: relative; left:300px;">Supprimer</span>
+                <span style="position: relative; left:20px; width:100px;"> <?php echo $donnees['nom'] ?></span>
+                <span style="position: relative; left:100px; width:70px;"> <?php echo $donnees['prenoms'] ?></span> 
+                <span style="position: relative; left:200px; width:80px;"> <?php echo $donnees['numero'] ?></span>
+                <span style="position: relative; left:300px; ;">Supprimer</span>
                 
                  
             </p> </center>
