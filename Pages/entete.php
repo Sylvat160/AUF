@@ -35,9 +35,21 @@
         </div>
     </nav>
 
-    
 
-   
+    <?php
+
+    if (isset($_POST['connecter'])) {
+        $password = $_POST['password'];
+        if ($password == 'AgenceUF') {
+            header('location:formuInscription.php');
+            // echo '<script>window.location.href="formulnscription.php"</script>';
+            
+        } else {
+            echo "Mot de passe incorrect";
+        }
+    }
+    ?>
+
 
 
     <script src="../JS/bootstrap.bundle.min.js"></script>

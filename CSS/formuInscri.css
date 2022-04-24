@@ -50,9 +50,10 @@
 }
 
 ::placeholder {
-    color :#fff;
+    color :rgb(255, 255, 255);
     position: relative;
     left: 20px;
+    
 }
 input {
     color: #fff;
@@ -68,6 +69,7 @@ input {
     position: relative;
     top: 16px;
     left: 20px;
+    
 }
 
 input[type=submit] {
