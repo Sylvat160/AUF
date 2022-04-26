@@ -13,7 +13,7 @@
 <body>
 
     <?php
-    // include("entete.php");
+     include("entete.php");
     ?>
 
     <div class="container sup">
@@ -27,42 +27,42 @@
 
 
             <label for="nom">
-                <p class="gx-3"><img src="../images/profile-user.png" alt="" width="40" class=""></p>
+                <p class="gx-3"><img src="../images/name.png" alt="" width="40" class=""></p>
             </label>
             <input type="text" required name="nom" placeholder="Nom" class="element" style="background-color:#CC767F; position: relative;  bottom:4px;">
 
             <label for="numero">
-                <p style="position: relative; left: 100px;"><img src="../images/profile-user.png" alt="" width="40"></p>
+                <p style="position: relative; left: 100px;"><img src="../images/phone.png" alt="" width="40"></p>
             </label>
             <input type="text" required name="numero" placeholder="Numero de telephone" class="element" style="position: relative; left:95px; bottom:4px; background-color:#CC767F; color:#fff;"> <br>
 
             <label for="prenom">
-                <p><img src="../images/profile-user.png" alt="" width="40"></p>
+                <p><img src="../images/name.png" alt="" width="40"></p>
             </label>
             <input type="text" required name="prenom" placeholder="Prenom" class="element" style="background-color:#CC767F;position: relative;  bottom:4px; color:#fff;">
 
             <label for="mail">
-                <p style="position: relative; left: 100px;"><img src="../images/profile-user.png" alt="" width="40"></p>
+                <p style="position: relative; left: 100px;"><img src="../images/mail.png" alt="" width="40"></p>
             </label>
             <input type="email" required name="mail" placeholder="Email" class="element" style="position: relative; left:95px; bottom:4px; background-color:#CC767F; color:#fff;"> <br>
 
             <label for="dNaissance">
-                <p><img src="../images/profile-user.png" alt="" width="40"></p>
+                <p><img src="../images/birth.png" alt="" width="40"></p>
             </label>
             <input type="date" required name="dNaissance" placeholder="Date de naissance" class="element" style="background-color:#CC767F; color:#fff; position: relative;  bottom:4px;">
 
             <label for="debut">
-                <p style="position: relative; left: 100px;"><img src="../images/profile-user.png" alt="" width="40"></p>
+                <p style="position: relative; left: 100px;"><img src="../images/date.png" alt="" width="40"></p>
             </label>
             <input type="date" required name="debut" placeholder="Début d'abonnement" class="element" style="position: relative; left:95px; bottom:4px; bottom:4px; background-color:#CC767F; color:#fff;">
 
-             <div class="container">
+            <div class="container">
                 <div class="row">
                     <div class="col-md-4 offset-md-5">
                         <input type="submit" value="Enregistrer" name="enregistrer" class="enregi" style="width: 190px; height:70px; background:red; border-radius :20px;">
                     </div>
                 </div>
-             </div>
+            </div>
 
 
 
@@ -70,35 +70,52 @@
     </div>
 
     <?php
-        try {
-            $bdd = new PDO('mysql:host=localhost;dbname=aufbdd;', 'root', '' ,
-                array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-        } catch (Exception $e) {
-            die('Erreur : ' . $e->getMessage());
-        }
+    try {
+        $bdd = new PDO(
+            'mysql:host=localhost;dbname=aufbdd;',
+            'root',
+            '',
+            array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)
+        );
+    } catch (Exception $e) {
+        die('Erreur : ' . $e->getMessage());
+    }
 
-        if (isset($_POST['nom']) AND isset($_POST['numero']) AND isset($_POST['prenom']) AND isset($_POST['mail']) AND isset($_POST['dNaissance']) AND isset($_POST['debut'])) {
-            $nom = $_POST['nom'];
-            $numero = $_POST['numero'];
-            $prenom = $_POST['prenom'];
-            $mail = $_POST['mail'];
-            $dNaissance = $_POST['dNaissance'];
-            $debut = $_POST['debut'];
+    if (isset($_POST['nom']) and isset($_POST['numero']) and isset($_POST['prenom']) and isset($_POST['mail']) and isset($_POST['dNaissance']) and isset($_POST['debut'])) {
+        $nom = $_POST['nom'];
+        $numero = $_POST['numero'];
+        $prenom = $_POST['prenom'];
+        $mail = $_POST['mail'];
+        $dNaissance = $_POST['dNaissance'];
+        $debut = $_POST['debut'];
 
-            $req = $bdd->prepare("INSERT INTO identifiants(nom, prenoms, date_de_naissance, numero, email, date_d_abonnement) VALUES(:nom, :prenoms, :date_de_naissance, :numero, :email, :date_d_abonnement)");
-            $req->bindParam(':nom', $nom);
-            $req->bindParam(':prenoms', $prenom);
-            $req->bindParam(':date_de_naissance', $dNaissance);
-            $req->bindParam(':numero', $numero);
-            $req->bindParam(':email', $mail);
-            $req->bindParam(':date_d_abonnement', $debut);
-            $req->execute();
+        $req = $bdd->prepare("INSERT INTO identifiants(nom, prenoms, date_de_naissance, numero, email, date_d_abonnement) VALUES(:nom, :prenoms, :date_de_naissance, :numero, :email, :date_d_abonnement)");
+        $req->bindParam(':nom', $nom);
+        $req->bindParam(':prenoms', $prenom);
+        $req->bindParam(':date_de_naissance', $dNaissance);
+        $req->bindParam(':numero', $numero);
+        $req->bindParam(':email', $mail);
+        $req->bindParam(':date_d_abonnement', $debut);
+        $req->execute();
 
-            $req->closeCursor();
-        } 
+        $req->closeCursor();
+    }
 
 
     ?>
+
+
+    <?php
+    include("listeA.php")
+
+
+    ?>
+
+    <center>
+        <a href='#'>
+            <img src='../images/+.png' alt=''>
+        </a>
+    </center>
 
 
     <script src="../JS/bootstrap.bundle.min.js"></script>

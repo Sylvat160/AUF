@@ -35,7 +35,7 @@
                 <span style="position: relative; left:20px; width:100px;"> <?php echo $donnees['nom'] ?></span>
                 <span style="position: relative; left:100px; width:70px;"> <?php echo $donnees['prenoms'] ?></span> 
                 <span style="position: relative; left:200px; width:80px;"> <?php echo $donnees['numero'] ?></span>
-                <span style="position: relative; left:300px; ;">Supprimer</span>
+                <span style="position: relative; left:300px; ;"><?php echo $donnees['email'] ?></span>
                 
                  
             </p> </center>
