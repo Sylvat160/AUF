@@ -44,21 +44,15 @@
     if (isset($_POST['connecter'])) {
         $password = $_POST['password'];
         if ($password == 'AgenceUF') {
-            // header('location:formuInscription.php');
-            // echo '<script>window.location.href="formulnscription.php"</script>';
-            // include("formuInscription.php");
-            // include("listeA.php");
+            
 
-        //     echo "<center>
-        //     <a href='#'>
-        //         <img src='../images/+.png' alt=''>
-        //     </a>
-        // </center>";
+      
 
         header("location:formuInscription.php");
 
         } else {
-            echo "<h1> Mot de passe incorrect</h1>";
+            echo "<h1><script> alert(\" Mot de passe incorrect\");</script></h1>";
+            header("location:acceuil.php?error=1");
         }
     }
     ?>

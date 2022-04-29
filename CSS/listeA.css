@@ -28,5 +28,82 @@
     padding: auto;
     border-radius: 20px;
     color: #fff;
+    margin-bottom: 20px;
 }
 
+#affi {
+    background-color: #CC767F;
+    color: #fff;
+    width: 50%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#nom1{
+    position: relative;
+    left: 20px;
+    width: 100px;
+
+}
+
+#prenom1 {
+    position: relative;
+    left: 100px;
+    width: 70px;
+}
+
+#numero1 {
+    position: relative;
+    left:200px;
+    width: 80px;
+}
+
+#mail1 {
+    position: relative;
+    left: 300px;
+}
+
+@media screen and (max-width : 679px) {
+
+    .voir {
+        width: 70%;
+      
+        margin-bottom: 20px;
+    }
+   
+    #affi {
+       width: 90%;
+   }
+   #mail1{
+       display: none;
+   }
+    #nom1{
+        position: relative;
+        left: 0;
+        width: 80px;
+    }
+    #prenom1 {
+        position: relative;
+        left: 30px;
+        width: 80px;
+    }
+    #numero1 {
+        position: relative;
+        left: 80px;
+        width: 80px;
+    }
+}
+
+@media screen and (min-width:680px) and (max-width:1279px) {
+    #affi {
+        background-color: #CC767F;
+        color: #fff;
+        width: 90%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+}

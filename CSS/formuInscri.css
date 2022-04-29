@@ -49,6 +49,8 @@
     
 }
 
+
+
 ::placeholder {
     color :rgb(255, 255, 255);
     position: relative;
@@ -57,6 +59,7 @@
 }
 input {
     color: #fff;
+    width: 300px;
 }
 
 .element {
@@ -76,3 +79,69 @@ input[type=submit] {
     color: #fff;
     font-size: 25px;
 }
+
+
+
+#numi , .element , #naissi {
+    background-color: #CC767F;
+    position: relative;
+    bottom: 4px;
+}
+#maili , #aboni , #numi  {
+    position: relative;
+    left: 95px;
+    bottom: 4px;
+    background-color: #CC767F;
+    color: #fff;
+
+}
+
+#mail , #num , #abon {
+    position: relative;
+    left: 100px;
+}
+
+
+@media screen and (max-width : 679px) {
+    .container .formu p {
+        width: 90px;
+        height: 70px;
+        position: relative;
+        bottom: 25px;
+        left: 4px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border: 2px solid black;
+    }
+    .element{
+        width: 70%;
+        height: 70px;
+        position: relative;
+        bottom: 8px;
+    }
+
+    #mail , #num , #abon , #naiss {
+        position: relative;
+        left: 10px;
+    }
+
+    #maili , #aboni , #numi  {
+        position: relative;
+        left: 6px;
+        bottom: 8px;
+    }
+    #naissi {
+        position: relative;
+        left: 6px;
+        bottom: 8px;
+    }
+    
+}
+
+@media screen and (min-width:680px) and (max-width:1279px) {
+    form {
+        position: relative;
+        right: 30px;
+    }
+}
+    

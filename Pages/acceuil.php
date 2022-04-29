@@ -12,7 +12,7 @@
 <body>
     <div class=" corps">
 
-        <a class="logo" href="#"><img src="../images/logoauf.png" alt="logo" width="150px"></a>
+        <a class="logo" href="#"><img src="../images/logoauf.png" alt="logo"></a>
 
         <center>
             <form method="post" action="entete.php">
@@ -32,17 +32,28 @@
                     <input name="connecter" type="submit" value="Se connecter">
                 </div>
 
-            </form> 
-            <br> <br> <br> <br> 
+            </form>
+            <br> <br> <br> <br>
 
 
         </center>
 
         <div class="pied">
-            <p> <span>A</span>gence <span>U</span>niversitaire de la  <span>F</span>rancophonie</p>
+            <p> <span>A</span>gence <span>U</span>niversitaire de la <span>F</span>rancophonie</p>
             <img src="../images/U.png" alt="" width="150px">
         </div>
-
+        <center>
+            <div class="erreur">
+                <?php
+                if (isset($_GET['error'])) {
+                    $err = $_GET['error'];
+                    if ($err == "1") {
+                        echo "<p>Mot de passe incorrect</p>";
+                    }
+                }
+                ?>
+            </div>
+        </center>
 
 
 

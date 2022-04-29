@@ -25,6 +25,9 @@ body {
     margin-left: 100px;
     margin-top: 50px;
 }
+.logo img {
+    width: 150px;
+}
 
 .sup  {
     width: 28%;
@@ -58,7 +61,7 @@ body {
     align-items: center;
     background-color: rgba(255, 255, 255, 0.368);
     position: relative;
-    top: 40px;
+    top: 36px;
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
     box-shadow: 0px 0px 10px 10px rgb(160, 158, 158);
@@ -104,3 +107,94 @@ body {
     right: 50px;
     top: 20px;
 }
+
+.erreur {
+    position: relative;
+    bottom: 100px;
+    color: red;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 679px) {
+   body {
+    background-size: cover;
+    background-position-x: 50px ;
+    background-position-y:center ;
+    background-attachment: fixed;
+
+   }
+   .logo {
+    margin: 0;
+   }
+   .logo img {
+        width: 100px;
+    
+    }
+    .sup {
+        width: 90%;
+    }
+    .infe{
+        width: 70%;
+    }
+
+    
+
+    .pied p {
+        position: relative;
+        font-size: 1.1rem;
+        font-weight: bold;
+        top: 10px;
+
+    }
+
+    .pied img {
+        display: none;
+    }
+    .erreur {
+        position: relative;
+        bottom: 50px;
+        color: black;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+}
+
+
+@media screen and (min-width: 680px) and (max-width:1279px) {
+    body {
+     background-size: cover;
+     background-position-x: left ;
+     background-position-y:center ;
+     background-attachment: fixed;
+ 
+    }
+    .corps form {
+        margin-top: 150px;
+    }
+    
+    .logo  {
+        margin: 0;
+     
+     }
+     .sup {
+         width: 60%;
+     }
+     .infe{
+         width: 50%;
+     }
+ 
+     
+ 
+     .pied  {
+        margin-top: 190px;
+     }
+     .erreur {
+        position: relative;
+        bottom: 150px;
+        color: black;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+ 
+     
+ }

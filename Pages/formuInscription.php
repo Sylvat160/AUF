@@ -13,7 +13,7 @@
 <body>
 
     <?php
-     include("entete.php");
+    include("entete.php");
     ?>
 
     <div class="container sup">
@@ -24,37 +24,36 @@
         <form method="post" action="" class="formu py-5">
 
 
-
-
             <label for="nom">
-                <p class="gx-3"><img src="../images/name.png" alt="" width="40" class=""></p>
+                <p id="nom" class="gx-3"><img src="../images/name.png" alt="" width="40" class=""></p>
             </label>
-            <input type="text" required name="nom" placeholder="Nom" class="element" style="background-color:#CC767F; position: relative;  bottom:4px;">
+            <input id="nomi" type="text" required name="nom" placeholder="Nom" class="element" style="">
+
 
             <label for="numero">
-                <p style="position: relative; left: 100px;"><img src="../images/phone.png" alt="" width="40"></p>
+                <p id="num" ><img src="../images/phone.png" alt="" width="40"></p>
             </label>
-            <input type="text" required name="numero" placeholder="Numero de telephone" class="element" style="position: relative; left:95px; bottom:4px; background-color:#CC767F; color:#fff;"> <br>
+            <input id="numi" type="text" required name="numero" placeholder="Numero de telephone" class="element" > <br>
 
             <label for="prenom">
-                <p><img src="../images/name.png" alt="" width="40"></p>
+                <p id="prenm"><img src="../images/name.png" alt="" width="40"></p>
             </label>
-            <input type="text" required name="prenom" placeholder="Prenom" class="element" style="background-color:#CC767F;position: relative;  bottom:4px; color:#fff;">
+            <input id="prenmi" type="text" required name="prenom" placeholder="Prenom" class="element" >
 
             <label for="mail">
-                <p style="position: relative; left: 100px;"><img src="../images/mail.png" alt="" width="40"></p>
+                <p id="mail" ><img src="../images/mail.png" alt="" width="40"></p>
             </label>
-            <input type="email" required name="mail" placeholder="Email" class="element" style="position: relative; left:95px; bottom:4px; background-color:#CC767F; color:#fff;"> <br>
+            <input id="maili" type="email" required name="mail" placeholder="Email" class="element" > <br>
 
             <label for="dNaissance">
-                <p><img src="../images/birth.png" alt="" width="40"></p>
+                <p id="naiss"><img src="../images/birth.png" alt="" width="40"></p>
             </label>
-            <input type="date" required name="dNaissance" placeholder="Date de naissance" class="element" style="background-color:#CC767F; color:#fff; position: relative;  bottom:4px;">
+            <input id="naissi" type="date" required name="dNaissance" placeholder="Date de naissance" class="element" >
 
             <label for="debut">
-                <p style="position: relative; left: 100px;"><img src="../images/date.png" alt="" width="40"></p>
+                <p id="abon" ><img src="../images/date.png" alt="" width="40"></p>
             </label>
-            <input type="date" required name="debut" placeholder="Début d'abonnement" class="element" style="position: relative; left:95px; bottom:4px; bottom:4px; background-color:#CC767F; color:#fff;">
+            <input id="aboni" type="date" required name="debut" placeholder="Début d'abonnement" class="element" >
 
             <div class="container">
                 <div class="row">
@@ -103,12 +102,9 @@
 
 
     ?>
-
-
+    
     <?php
-    include("listeA.php")
-
-
+        include("listeA.php");
     ?>
 
     <center>
