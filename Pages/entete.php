@@ -39,23 +39,9 @@
     
 
 
-    <?php
+    
 
-    if (isset($_POST['connecter'])) {
-        $password = $_POST['password'];
-        if ($password == 'AgenceUF') {
-            
-
-      
-
-        header("location:formuInscription.php");
-
-        } else {
-            echo "<h1><script> alert(\" Mot de passe incorrect\");</script></h1>";
-            header("location:acceuil.php?error=1");
-        }
-    }
-    ?>
+    
 
    
 
