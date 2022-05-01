@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if (!isset($_SESSION['connecter'])) {
+        header('location:acceuil.php');
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
